@@ -1,0 +1,27 @@
+info:
+  name: /api/items/:id/bids 2
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{URL}}/api/items/:id/bids"
+  params:
+    - name: id
+      value: "1233214"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "amount": 85000
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE3NjI0MTUwNTc2MTQsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJpYXQiOjE3ODA5ODAxNzEsImV4cCI6MTc4MTA2NjU3MX0.1_53Befobv-DQz6dsaMAu78iHz5CUAepaXvPFwVKom4
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
